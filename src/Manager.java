@@ -11,7 +11,6 @@ public class Manager {
         return name;
     }
 
-    // Delete an order by index
     public void deleteOrder(Store store, int orderIndex) {
         List<Order> orders = store.getOrders();
         if (orderIndex >= 0 && orderIndex < orders.size()) {
@@ -22,7 +21,6 @@ public class Manager {
         }
     }
 
-    // Edit an order by adding or removing products
     public void editOrder(Store store, int orderIndex, String action, Product product, int quantity) {
         List<Order> orders = store.getOrders();
         if (orderIndex >= 0 && orderIndex < orders.size()) {
@@ -41,7 +39,6 @@ public class Manager {
         }
     }
 
-    // Edit customer details
     public void editCustomer(Store store, int customerId, String newName, int newId) {
         List<Customer> customers = store.getCustomers();
         for (Customer customer : customers) {

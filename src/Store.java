@@ -23,7 +23,7 @@ public class Store {
     public void createOrder(Customer customer, List<Product> productList) {
         Order order = new Order(customer);
         for (Product product : productList) {
-            order.addProduct(product, 1);  // Default quantity to 1 for simplicity
+            order.addProduct(product, 1);
         }
         orders.add(order);
     }

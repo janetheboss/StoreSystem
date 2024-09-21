@@ -22,7 +22,7 @@ public class Order {
 
     public void removeProduct(Product product, int quantity) {
         if (products.contains(product)) {
-            product.reduceQuantity(-quantity); // Add back the quantity to the store's stock
+            product.reduceQuantity(-quantity);
             products.remove(product);
             System.out.println(quantity + " " + product.getName() + "(s) removed from the cart.");
         } else {

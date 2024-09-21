@@ -6,7 +6,7 @@ public class Customer {
     public Customer(String name, int id) {
         this.name = name;
         this.id = id;
-        this.cart = new Order(this);  // Each customer starts with an empty cart (order)
+        this.cart = new Order(this);
     }
 
     public String getName() {
@@ -29,12 +29,10 @@ public class Customer {
         return cart;
     }
 
-    // Add product to cart
     public void addToCart(Product product, int quantity) {
         cart.addProduct(product, quantity);
     }
 
-    // Remove product from cart
     public void removeFromCart(Product product, int quantity) {
         cart.removeProduct(product, quantity);
     }
